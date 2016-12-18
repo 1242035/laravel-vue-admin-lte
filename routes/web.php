@@ -15,18 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// routes for auth
 Auth::routes();
 
-Route::get('admin', ['middleware' => ['auth'], function () {
-    $user = Auth::user();
-    $user = array_except($user, ['created_at', 'updated_at']);
-    if (Auth::user()->hasGroup('admin')) {
-        $customClaims = ['group' => 'admin'];
-        $token = JWTAuth::fromUser($user, $customClaims);
-    }
-    return view('admin', compact('token'));
-}]);
+Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 

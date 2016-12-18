@@ -1,10 +1,9 @@
 require('./bootstrap')
 
-import Vue from 'vue'
-import App from './App.vue'
+const App = require('./App.vue');
 
 // Plugins
-import router from './router'
+const router = require('./router');
 
 /* eslint-disable no-new */
 new Vue({

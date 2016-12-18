@@ -11,11 +11,6 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        ///create admin role
-        $group = App\Group::create([
-            'name' => 'admin'
-        ]);
-
         //create admin user
         $user = App\User::create([
             'name' => 'admin',
@@ -29,9 +24,5 @@ class UserTableSeeder extends Seeder
             'password' => \Hash::make('password'),
             'email'    => 'user@user.com'
         ]);
-
-        //assign admin role to first user
-        $user->assignGroup(1);
-
     }
 }

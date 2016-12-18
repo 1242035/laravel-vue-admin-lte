@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import navigation from './navigation'
+  const navigation = require('./navigation.vue');
 
   export default {
     components: {

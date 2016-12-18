@@ -50,16 +50,16 @@
 </template>
 
 <script>
-  import InfoBox from './dashboard/InfoBox'
-  import InfoBox2 from './dashboard/InfoBox2'
-  import Breadcrumb from './ui/Breadcrumb'
-  import Box1 from './ui/Box1'
-  import MapReport from './ui/MapReport'
-  import DirectChat from './ui/DirectChat'
-  import UserList from './ui/UserList'
-  import TableBox from './ui/TableBox'
-  import UsageBox from './ui/UsageBox'
-  import ProductList from './ui/ProductList'
+  const InfoBox = require('./dashboard/InfoBox.vue');
+  const InfoBox2 = require('./dashboard/InfoBox2.vue');
+  const Breadcrumb = require('./ui/Breadcrumb.vue');
+  const Box1 = require('./ui/Box1.vue');
+  const MapReport = require('./ui/MapReport.vue');
+  const DirectChat = require('./ui/DirectChat.vue');
+  const UserList = require('./ui/UserList.vue');
+  const TableBox = require('./ui/TableBox.vue');
+  const UsageBox = require('./ui/UsageBox.vue');
+  const ProductList = require('./ui/ProductList.vue');
 
   export default {
     components: {

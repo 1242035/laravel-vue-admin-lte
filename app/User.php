@@ -6,10 +6,10 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-
+use Laravel\Passport\HasApiTokens;
 class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract
 {
-    use Authenticatable, CanResetPassword;
+    use HasApiTokens,Authenticatable, CanResetPassword;
 
     /**
      * The database table used by the model.
@@ -32,26 +32,4 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
      */
     protected $hidden = ['password', 'remember_token'];
 
-    public function groups()
-    {
-        return $this->belongsToMany('App\Group');
-    }
-
-    public function hasGroup($name)
-    {
-        foreach ($this->groups as $group) {
-            if ($group->name == $name) return true;
-        }
-        return false;
-    }
-
-    public function assignGroup($group)
-    {
-        return $this->groups()->attach($group);
-    }
-
-    public function removeGroup($group)
-    {
-        return $this->groups()->detach($group);
-    }
 }

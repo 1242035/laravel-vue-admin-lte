@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA","file":"admin.css","sourcesContent":[]}
+{"version":3,"sources":["admin.scss"],"names":[],"mappings":"AAAA,0CAAY;AACZ,+CAAY;AACZ,sDAAY","file":"admin.css","sourcesContent":["@import url('../static/css/AdminLTE.css');\n@import url('../static/css/bootstrap.min.css');\n@import url('../static/css/skins/_all-skins.min.css');\n"]}

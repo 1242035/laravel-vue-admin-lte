@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import Breadcrumb from './ui/Breadcrumb'
+  const Breadcrumb = require('./ui/Breadcrumb.vue');
   export default {
     components: {
       Breadcrumb

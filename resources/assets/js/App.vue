@@ -9,23 +9,22 @@
 </template>
 
 <script>
-import topo from './components/shared/topo'
-import sidebar from './components/shared/sidebar'
-import rodape from './components/shared/rodape'
-import rightbar from './components/shared/rightbar'
-
+const topo = require('./components/shared/topo.vue');
+const sidebar = require('./components/shared/sidebar.vue');
+const rodape = require('./components/shared/rodape.vue');
+const rightbar = require('./components/shared/rightbar.vue');
+const passportClient = require('./components/passport/Clients.vue');
+const authorizedClient = require('./components/passport/AuthorizedClients.vue');
+const personalAccessClient = require('./components/passport/PersonalAccessTokens.vue');
 export default {
   components: {
     topo,
     sidebar,
     rodape,
-    rightbar
+    rightbar,
+    passportClient,
+    authorizedClient,
+    personalAccessClient
   }
 }
 </script>
-
-<style>
-@import url('/static/css/AdminLTE.css');
-@import url('/static/css/bootstrap.min.css');
-@import url('/static/css/skins/_all-skins.min.css');
-</style>
