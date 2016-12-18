@@ -13,7 +13,7 @@
 
 // routes for auth
 Auth::routes();
-Route::group(['domain'=>'admin.test.dev','middleware' => 'web' ], function(){
+Route::group(['middleware' => 'web' ], function(){
   Route::get('/', function () {
       return view('admin');
   });

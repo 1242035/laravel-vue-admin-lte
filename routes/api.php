@@ -1,7 +1,7 @@
 <?php
 use Laravel\Passport\Passport;
 // api for admin pages
-Route::group(['domain' => 'api.test.dev', 'middleware' => 'auth:api'], function()
+Route::group(['middleware' => 'auth:api'], function()
 {
     Passport::routes();
     Passport::enableImplicitGrant();

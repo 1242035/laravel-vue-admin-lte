@@ -58825,12 +58825,13 @@ var App = require('./App.vue');
 
 // Plugins
 var router = require('./router');
-
 /* eslint-disable no-new */
+
 new Vue({
   router: router,
-  render: function render(h) {
-    return h(App);
+  render: function render(createElement) {
+    return App;
+    return createElement(App);
   }
 }).$mount('#app');
 
@@ -58862,7 +58863,8 @@ require('vue-resource');
  * the outgoing requests issued by this application. The CSRF middleware
  * included with Laravel will automatically verify the header's value.
  */
-
+Vue.config.devtools = true;
+Vue.config.debug = true;
 Vue.http.interceptors.push(function (request, next) {
   request.headers.set('X-CSRF-TOKEN', App.csrfToken);
   next();
@@ -59848,46 +59850,25 @@ if (module.hot) {(function () {  module.hot.accept()
 },{"vue":123,"vue-hot-reload-api":120}],154:[function(require,module,exports){
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var Vue = require('vue');
+var VueRouter = require('vue-router');
 
-var _vue = require('vue');
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _vueRouter = require('vue-router');
-
-var _vueRouter2 = _interopRequireDefault(_vueRouter);
-
-var _Home = require('./components/Home.vue');
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _Dashboard = require('./components/Dashboard2.vue');
-
-var _Dashboard2 = _interopRequireDefault(_Dashboard);
-
-var _Widgets = require('./components/Widgets.vue');
-
-var _Widgets2 = _interopRequireDefault(_Widgets);
-
-var _Charts = require('./components/Charts.vue');
-
-var _Charts2 = _interopRequireDefault(_Charts);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_vue2.default.use(_vueRouter2.default);
+Vue.use(VueRouter);
 
 // Components
+var Home = require('./components/Home.vue');
+var Dashboard2 = require('./components/Dashboard2.vue');
+var Widgets = require('./components/Widgets.vue');
+var Charts = require('./components/Charts.vue');
 
-
-var router = new _vueRouter2.default({
-  routes: [{ path: '/', component: _Home2.default }, { path: '/dashboard2', component: _Dashboard2.default }, { path: '/widgets', component: _Widgets2.default }, { path: '/charts', component: _Charts2.default }]
+var router = new VueRouter({
+  history: true,
+  saveScrollPosition: true,
+  root: '/',
+  routes: [{ path: '/', component: Home }, { path: '/dashboard', component: Dashboard2 }, { path: '/widgets', component: Widgets }, { path: '/charts', component: Charts }]
 });
 
-exports.default = router;
+module.exports = router;
 
 },{"./components/Charts.vue":132,"./components/Dashboard2.vue":133,"./components/Home.vue":134,"./components/Widgets.vue":135,"vue":123,"vue-router":122}],155:[function(require,module,exports){
 "use strict";

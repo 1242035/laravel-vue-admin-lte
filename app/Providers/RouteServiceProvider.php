@@ -54,6 +54,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapAdminRoutes()
     {
         Route::group([
+            'domain' => 'admin.test.dev',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/admin.php');
@@ -85,7 +86,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::group([
-            //'middleware' => 'api',
+            'domain' => 'api.test.dev',
             'namespace' => $this->namespace,
         ], function ($router) {
             //

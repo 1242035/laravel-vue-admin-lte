@@ -14,7 +14,6 @@
 </head>
 <body class="body">
     <div id="app">
-        <component :is="currentView" :params="params"></component>
     </div>
     <script src="/js/admin.js"></script>
 </body>

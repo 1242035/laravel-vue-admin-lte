@@ -4,9 +4,12 @@ const App = require('./App.vue');
 
 // Plugins
 const router = require('./router');
-
 /* eslint-disable no-new */
+
 new Vue({
   router,
-  render: (h) => h(App)
-}).$mount('#app')
+  render: function(createElement){
+      return App;
+      return createElement(App);
+  }
+}).$mount('#app');

@@ -1,22 +1,25 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+const Vue = require('vue');
+const VueRouter = require('vue-router');
 
 Vue.use(VueRouter)
 
 // Components
-import Home from './components/Home.vue'
-import Dashboard2 from './components/Dashboard2.vue'
-import Widgets from './components/Widgets.vue'
-import Charts from './components/Charts.vue'
+const Home = require('./components/Home.vue');
+const Dashboard2 = require('./components/Dashboard2.vue');
+const Widgets = require('./components/Widgets.vue');
+const Charts = require('./components/Charts.vue');
 
 
 const router = new VueRouter({
+  history: true,
+	saveScrollPosition: true,
+	root: '/',
   routes: [
     { path: '/', component: Home },
-    { path: '/dashboard2', component: Dashboard2 },
+    { path: '/dashboard', component: Dashboard2 },
     { path: '/widgets', component: Widgets },
     { path: '/charts', component: Charts }
   ]
-})
+});
 
-export default router
+module.exports = router;
