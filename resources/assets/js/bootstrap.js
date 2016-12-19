@@ -38,10 +38,10 @@ Vue.http.interceptors.push((request, next) => {
 window.Chart = require('chart.js')
 window.FastClick = require('fastclick')
 
-require('../assets/plugins/sparkline/jquery.sparkline.min.js')
-require('../assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')
-require('../assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')
-require('../assets/plugins/slimScroll/jquery.slimscroll.min.js')
+require('../static/plugins/sparkline/jquery.sparkline.min.js')
+require('../static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')
+require('../static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')
+require('../static/plugins/slimScroll/jquery.slimscroll.min.js')
 
 require('../static/js/app.min.js')
 // require('../static/js/pages/dashboard2.js')

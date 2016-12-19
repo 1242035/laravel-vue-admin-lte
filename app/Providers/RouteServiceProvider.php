@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-///use Laravel\Passport\Passport;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -37,10 +36,9 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
         $this->mapAdminRoutes();
-
         $this->mapWebRoutes();
+
         //
     }
 
@@ -51,15 +49,16 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapAdminRoutes()
+    protected function mapWebRoutes()
     {
         Route::group([
-            'domain' => 'admin.test.dev',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
-            require base_path('routes/admin.php');
+            require base_path('routes/web.php');
         });
     }
+
     /**
      * Define the "admin" routes for the application.
      *
@@ -67,12 +66,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapAdminRoutes()
     {
         Route::group([
+            'domain' => 'admin.test.dev',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
-            require base_path('routes/web.php');
+            require base_path('routes/admin.php');
         });
     }
 
@@ -87,9 +88,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'domain' => 'api.test.dev',
+            'middleware' => 'api',
             'namespace' => $this->namespace,
         ], function ($router) {
-            //
             require base_path('routes/api.php');
         });
     }

@@ -12,6 +12,12 @@ require('laravel-elixir-vueify');
  |
  */
  elixir((mix) => {
+     mix.sass('app.scss', 'public/css/app.css')
+        .browserify('bootstrap.js', 'public/js/app.js');
+ });
+
+
+ elixir((mix) => {
      mix.sass('admin.scss', 'public/css/admin.css')
         .browserify('admin.js', 'public/js/admin.js');
  });

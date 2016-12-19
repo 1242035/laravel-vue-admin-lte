@@ -13,8 +13,6 @@
 
 // routes for auth
 Auth::routes();
-Route::group(['middleware' => 'web' ], function(){
-  Route::get('/', function () {
-      return view('admin');
-  });
-});
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/', function () { return view('admin'); });
+} );

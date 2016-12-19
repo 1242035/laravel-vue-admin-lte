@@ -15,11 +15,11 @@
 
 @section('extras')
 <script>
-$(function() {
-  $('.flash-close').on('click touchstart', function (e) {
-    e.preventDefault();
-    $('.flash-close').parent().hide();
-  });
-});
+( function($) {
+	$('body').delegate('.flash-close','click touchstart', function(e){
+		e.preventDefault();
+		$('.flash-close').parent().hide();
+	} );
+})(jQuery);
 </script>
 @endsection
