@@ -1,13 +1,10 @@
 <template>
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>Charts</h1>
 
       <breadcrumb :itens="breadcrumb"></breadcrumb>
     </section>
-
-    <!-- Main content -->
     <section class="content">
       <div class="row">
       </div>

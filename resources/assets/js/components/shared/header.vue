@@ -5,8 +5,6 @@
       <span class="logo-mini"><b>A</b>LT</span>
       <span class="logo-lg"><b>Admin</b>LTE</span>
     </router-link>
-
-    <!-- Header Navbar: style can be found in header.less -->
     <navigation></navigation>
   </header>
 </template>

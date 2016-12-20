@@ -1,14 +1,10 @@
 <template>
     <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
       <a class="sidebar-toggle" data-toggle="offcanvas">
         <span class="sr-only">Toggle navigation</span>
       </a>
-
-      <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
@@ -17,7 +13,6 @@
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
-                <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- start message -->
                     <a href="#">
