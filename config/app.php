@@ -1,4 +1,12 @@
 <?php
+# @Author: Onemax <onemax>
+# @Date:   2016-12-29T10:28:42+07:00
+# @Email:  hotro@onemax.com.vn
+# @Project: Onemax
+# @Last modified by:   onemax
+# @Last modified time: 2016-12-29T11:03:37+07:00
+# @Copyright: Onemax.ltd.co
+
 
 return [
 
@@ -12,7 +20,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Laravel Admin',
 
     /*
     |--------------------------------------------------------------------------

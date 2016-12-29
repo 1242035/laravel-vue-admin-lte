@@ -1,4 +1,12 @@
 <?php
+# @Author: Onemax <onemax>
+# @Date:   2016-12-29T10:28:42+07:00
+# @Email:  hotro@onemax.com.vn
+# @Project: Onemax
+# @Last modified by:   onemax
+# @Last modified time: 2016-12-29T10:56:05+07:00
+# @Copyright: Onemax.ltd.co
+
 
 namespace App\Providers;
 
@@ -36,7 +44,9 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-        $this->mapAdminRoutes();
+
+        //$this->mapAdminRoutes();
+
         $this->mapWebRoutes();
 
         //
@@ -59,17 +69,9 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Define the "admin" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
     protected function mapAdminRoutes()
     {
         Route::group([
-            'domain' => 'admin.test.dev',
             'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
@@ -87,9 +89,9 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::group([
-            'domain' => 'api.test.dev',
             'middleware' => 'api',
             'namespace' => $this->namespace,
+            'prefix' => 'api',
         ], function ($router) {
             require base_path('routes/api.php');
         });

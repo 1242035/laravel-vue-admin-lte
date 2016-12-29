@@ -1,3 +1,13 @@
+/**
+* @Author: Onemax <onemax>
+* @Date:   2016-12-29T10:28:42+07:00
+* @Email:  hotro@onemax.com.vn
+* @Project: Onemax
+* @Last modified by:   onemax
+* @Last modified time: 2016-12-29T10:46:10+07:00
+* @Copyright: Onemax.ltd.co
+*/
+
 window._ = require('lodash');
 
 /**
@@ -23,10 +33,9 @@ require('vue-resource');
  * the outgoing requests issued by this application. The CSRF middleware
  * included with Laravel will automatically verify the header's value.
  */
-Vue.config.devtools = true;
-Vue.config.debug = true;
+
 Vue.http.interceptors.push((request, next) => {
-    request.headers.set('X-CSRF-TOKEN', App.csrfToken);
+    request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
     next();
 });
 
@@ -35,14 +44,10 @@ Vue.http.interceptors.push((request, next) => {
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
-window.Chart = require('chart.js')
-window.FastClick = require('fastclick')
 
-require('../static/plugins/sparkline/jquery.sparkline.min.js')
-require('../static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')
-require('../static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')
-require('../static/plugins/slimScroll/jquery.slimscroll.min.js')
+// import Echo from "laravel-echo"
 
-require('../static/js/app.min.js')
-// require('../static/js/pages/dashboard2.js')
-// require('../static/js/demo.js')
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: 'your-pusher-key'
+// });

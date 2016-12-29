@@ -1,0 +1,37 @@
+// @Author: Hong Anh <honganh>
+// @Date:   2016-12-27T11:55:22+07:00
+// @Email:  chidungdekiemtra@gmail.com
+// @Project: Onemax
+// @Last modified by:   honganh
+// @Last modified time: 2016-12-27T12:05:08+07:00
+
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: $h1-size;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+}
+
+h2 {
+	font-size: $h2-size;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+
+.b-b {
+    border-bottom: 1px solid $border-light-color;
+}
+
+.p-20 {
+	padding: 20px;
+}
+
+.p-30 {
+	padding: 30px;
+}

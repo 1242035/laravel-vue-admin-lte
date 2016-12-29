@@ -1,4 +1,12 @@
 <?php
+# @Author: Onemax <onemax>
+# @Date:   2016-12-29T10:28:42+07:00
+# @Email:  hotro@onemax.com.vn
+# @Project: Onemax
+# @Last modified by:   onemax
+# @Last modified time: 2016-12-29T11:06:40+07:00
+# @Copyright: Onemax.ltd.co
+
 
 return [
 
@@ -42,7 +50,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'passport',
+            'driver' => 'Passport',
             'provider' => 'users',
         ],
     ],

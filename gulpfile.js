@@ -1,6 +1,19 @@
+/**
+* @Author: Onemax <onemax>
+* @Date:   2016-12-29T10:28:42+07:00
+* @Email:  hotro@onemax.com.vn
+* @Project: Onemax
+* @Last modified by:   onemax
+* @Last modified time: 2016-12-29T13:53:43+07:00
+* @Copyright: Onemax.ltd.co
+*/
+
 const elixir = require('laravel-elixir');
 
+//require('laravel-elixir-vue-2');
+require('laravel-elixir-browserify-official');
 require('laravel-elixir-vueify');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,13 +24,8 @@ require('laravel-elixir-vueify');
  | file for our application, as well as publishing vendor resources.
  |
  */
- elixir((mix) => {
-     mix.sass('app.scss', 'public/css/app.css')
-        .browserify('bootstrap.js', 'public/js/app.js');
- });
 
-
- elixir((mix) => {
-     mix.sass('admin.scss', 'public/css/admin.css')
-        .browserify('admin.js', 'public/js/admin.js');
- });
+elixir(mix => {
+    mix.sass('app.scss')
+       .browserify('app.js');
+});
