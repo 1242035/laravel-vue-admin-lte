@@ -3,17 +3,20 @@
 * @Date:   2016-12-27T09:52:18+07:00
 * @Email:  chidungdekiemtra@gmail.com
 * @Project: Onemax
-* @Last modified by:   honganh
-* @Last modified time: 2016-12-28T10:13:36+07:00
+* @Last modified by:   onemax
+* @Last modified time: 2016-12-30T13:39:11+07:00
 */
 
 module.exports = {
 
-    configRouter: function (router) {
+    configRouter: function () {
 
-        router.map({
+        return {
          '/login': {
               component: require('./components/includes/login.vue')
+          },
+          '/': {
+            component: require('./components/dashboard/index.vue')
           },
 	      '/dashboard': {
 	        component: require('./components/dashboard/index.vue'),
@@ -45,10 +48,6 @@ module.exports = {
           '/system/usermanagement': {
             component: require('./components/system/users.vue')
           }
-        })
-
-        router.alias({
-            '': '/dashboard'
-        })
+        }
     }
 }

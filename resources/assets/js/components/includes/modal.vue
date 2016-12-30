@@ -65,8 +65,7 @@
                       <label>{{ $t("contact.type") }}</label>
                         <select class="form-control" name="contact_type_id" v-model="contact.contact_type_id">
                           <option v-for="type in contactType"
-                                  value="{{type.id}}"
-                                  selected="selected"
+                                  :value="type.id"
                           >{{type.name}}</option>
                         </select>
                     </div>

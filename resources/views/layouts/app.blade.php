@@ -4,7 +4,7 @@
 # @Email:  hotro@onemax.com.vn
 # @Project: Onemax
 # @Last modified by:   onemax
-# @Last modified time: 2016-12-29T13:44:25+07:00
+# @Last modified time: 2016-12-30T10:27:34+07:00
 # @Copyright: Onemax.ltd.co
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+    <div class="wrapper">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -86,8 +86,9 @@
                 </div>
             </div>
         </nav>
-
-        @yield('content')
+        <div class="app-wrapper" id="app">
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->
