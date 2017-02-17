@@ -4,11 +4,11 @@
 # @Email:  hotro@onemax.com.vn
 # @Project: Onemax
 # @Last modified by:   onemax
-# @Last modified time: 2016-12-29T11:05:47+07:00
+# @Last modified time: 2017-02-17T14:52:08+07:00
 # @Copyright: Onemax.ltd.co
 
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

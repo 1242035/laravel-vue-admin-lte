@@ -7941,7 +7941,6 @@ h2 {
 }
 
 .sidebar li {
-  padding-left: 20px;
   -webkit-transition: background-color .1s ease-in-out 0s;
   transition: background-color .1s ease-in-out 0s;
   border-left: 4px solid transparent;

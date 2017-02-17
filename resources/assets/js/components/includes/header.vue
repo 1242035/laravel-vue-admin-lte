@@ -1,15 +1,7 @@
 <template>
     <div class="header">
         <ul class="nav nav-header">
-            <li class="title">Menu <i class="fa fa-bars" aria-hidden="true"></i></li>
-            <li v-link-active>
-            	<a v-link="{ path: '/dashboard', activeClass: 'active'}"><i class="fa fa-deaf" aria-hidden="true"></i>
-            	{{ $t("header.dashboard") }}</a>
-            </li>
-            <li v-link-active>
-            	<a v-link="{ path: '/crm', activeClass: 'active'}"><i class="fa fa-users" aria-hidden="true"></i>
-            	{{ $t("header.contacts") }}</a>
-            </li>
+            
         </ul>
     </div>
 </template>

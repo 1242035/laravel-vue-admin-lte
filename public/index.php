@@ -1,4 +1,12 @@
 <?php
+# @Author: Onemax <onemax>
+# @Date:   2016-12-29T10:28:42+07:00
+# @Email:  hotro@onemax.com.vn
+# @Project: Onemax
+# @Last modified by:   onemax
+# @Last modified time: 2017-02-17T11:07:32+07:00
+# @Copyright: Onemax.ltd.co
+
 
 /**
  * Laravel - A PHP Framework For Web Artisans
@@ -18,7 +26,6 @@
 | loading any of our classes later on. It feels nice to relax.
 |
 */
-
 require __DIR__.'/../bootstrap/autoload.php';
 
 /*

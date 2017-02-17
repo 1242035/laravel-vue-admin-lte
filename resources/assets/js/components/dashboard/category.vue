@@ -1,10 +1,12 @@
 <template>
 <div>
-    dashboard
+    category
 </div>
+
 </template>
 <script>
+
 export default {
-	name: 'DashboardIndex',
+	name: 'category',
 }
 </script>

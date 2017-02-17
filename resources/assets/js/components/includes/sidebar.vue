@@ -2,13 +2,23 @@
     <div class="sidebar">
         <ul class="nav nav-sidebar">
             <li class="title">Menu <i class="fa fa-bars" aria-hidden="true"></i></li>
-            <li v-link-active>
-            	<a v-link="{ path: '/dashboard', activeClass: 'active'}"><i class="fa fa-deaf" aria-hidden="true"></i>
-            	{{ $t("sidebar.dashboard") }}</a>
+            <li>
+                <router-link :to="{ path: '/',  activeClass: 'active'}">Home</router-link>
             </li>
-            <li v-link-active>
-            	<a v-link="{ path: '/crm', activeClass: 'active'}"><i class="fa fa-users" aria-hidden="true"></i>
-            	{{ $t("sidebar.contacts") }}</a>
+            <li>
+            	<router-link :to="{ path: '/posts',  activeClass: 'active'}">Posts</router-link>
+            </li>
+            <li>
+            	<router-link :to="{ path: '/media',  activeClass: 'active'}">Media</router-link>
+            </li>
+            <li>
+            	<router-link :to="{ path: '/categories',  activeClass: 'active'}">Categories</router-link>
+            </li>
+            <li>
+            	<router-link :to="{ path: '/pages',  activeClass: 'active'}">Pages</router-link>
+            </li>
+            <li>
+            	<router-link :to="{ path: '/users',  activeClass: 'active'}">Users</router-link>
             </li>
         </ul>
     </div>

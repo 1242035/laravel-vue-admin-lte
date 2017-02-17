@@ -1,14 +1,23 @@
 <template>
     <div class="footer">
-        <ul class="nav nav-footer">
-            <li class="title">Menu <i class="fa fa-bars" aria-hidden="true"></i></li>
-            <li v-link-active>
-            	<a v-link="{ path: '/dashboard', activeClass: 'active'}"><i class="fa fa-deaf" aria-hidden="true"></i>
-            	{{ $t("footer.dashboard") }}</a>
+        <ul class="nav nav-footer row">
+            <li class="col-md-2">
+                <router-link :to="{ path: '/',  activeClass: 'active'}">Home</router-link>
             </li>
-            <li v-link-active>
-            	<a v-link="{ path: '/crm', activeClass: 'active'}"><i class="fa fa-users" aria-hidden="true"></i>
-            	{{ $t("footer.contacts") }}</a>
+            <li class="col-md-2">
+                <router-link :to="{ path: '/posts',  activeClass: 'active'}">Posts</router-link>
+            </li>
+            <li class="col-md-2">
+                <router-link :to="{ path: '/media',  activeClass: 'active'}">Media</router-link>
+            </li>
+            <li class="col-md-2"e>
+                <router-link :to="{ path: '/categories',  activeClass: 'active'}">Categories</router-link>
+            </li>
+            <li class="col-md-2">
+                <router-link :to="{ path: '/pages',  activeClass: 'active'}">Pages</router-link>
+            </li>
+            <li class="col-md-2">
+                <router-link :to="{ path: '/users',  activeClass: 'active'}">Users</router-link>
             </li>
         </ul>
     </div>

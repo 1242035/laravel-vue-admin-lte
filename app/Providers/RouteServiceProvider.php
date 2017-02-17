@@ -4,7 +4,7 @@
 # @Email:  hotro@onemax.com.vn
 # @Project: Onemax
 # @Last modified by:   onemax
-# @Last modified time: 2016-12-29T10:56:05+07:00
+# @Last modified time: 2017-02-17T11:06:00+07:00
 # @Copyright: Onemax.ltd.co
 
 
@@ -63,7 +63,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'web',
-            'namespace' => $this->namespace,
+            'namespace'  => $this->namespace,
         ], function ($router) {
             require base_path('routes/web.php');
         });
@@ -73,7 +73,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'web',
-            'namespace' => $this->namespace,
+            'namespace'  => $this->namespace,
         ], function ($router) {
             require base_path('routes/admin.php');
         });
@@ -90,7 +90,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'api',
-            'namespace' => $this->namespace,
+            'namespace'  => $this->namespace,
             'prefix' => 'api',
         ], function ($router) {
             require base_path('routes/api.php');

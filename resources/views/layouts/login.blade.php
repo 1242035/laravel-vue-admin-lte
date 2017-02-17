@@ -4,7 +4,7 @@
 # @Email:  hotro@onemax.com.vn
 # @Project: Onemax
 # @Last modified by:   onemax
-# @Last modified time: 2017-02-17T11:34:05+07:00
+# @Last modified time: 2017-02-17T11:33:44+07:00
 # @Copyright: Onemax.ltd.co
 ?>
 <!DOCTYPE html>
@@ -27,8 +27,6 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
@@ -83,6 +81,5 @@
             @yield('content')
         </div>
     </div>
-    <script src="/js/app.js"></script>
 </body>
 </html>

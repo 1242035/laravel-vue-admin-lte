@@ -4,7 +4,7 @@
 # @Email:  hotro@onemax.com.vn
 # @Project: Onemax
 # @Last modified by:   onemax
-# @Last modified time: 2016-12-29T11:06:40+07:00
+# @Last modified time: 2017-02-17T14:52:31+07:00
 # @Copyright: Onemax.ltd.co
 
 
@@ -75,7 +75,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Models\User::class,
         ],
 
         // 'users' => [

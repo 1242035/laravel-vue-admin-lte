@@ -4,7 +4,7 @@
 * @Email:  hotro@onemax.com.vn
 * @Project: Onemax
 * @Last modified by:   onemax
-* @Last modified time: 2016-12-29T10:46:10+07:00
+* @Last modified time: 2017-02-17T12:40:26+07:00
 * @Copyright: Onemax.ltd.co
 */
 
@@ -26,7 +26,9 @@ require('bootstrap-sass');
  */
 
 window.Vue = require('vue');
-require('vue-resource');
+window.VueResource = require('vue-resource');
+window.VueI18n = require('vue-i18n');
+window.VueRouter = require('vue-router');
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
@@ -35,10 +37,12 @@ require('vue-resource');
  */
 
 Vue.http.interceptors.push((request, next) => {
-    request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
+    request.headers.set('X-CSRF-TOKEN', Token.csrfToken);
     next();
 });
-
+Vue.config.debug = true;
+Vue.config.devtools = true;
+Vue.config.lang = 'en';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

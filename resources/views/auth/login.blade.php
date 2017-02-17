@@ -1,4 +1,13 @@
-@extends('layouts.app')
+<?php
+# @Author: Onemax <onemax>
+# @Date:   2016-12-29T10:50:22+07:00
+# @Email:  hotro@onemax.com.vn
+# @Project: Onemax
+# @Last modified by:   onemax
+# @Last modified time: 2017-02-17T11:28:19+07:00
+# @Copyright: Onemax.ltd.co
+?>
+@extends('layouts.login')
 
 @section('content')
 <div class="container">

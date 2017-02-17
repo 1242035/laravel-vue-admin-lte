@@ -50,6 +50,6 @@
 </template>
 <script>
     export default {
-        name: 'footer',
+        name: 'login',
     }
 </script>
